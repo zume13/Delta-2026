@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+:root{
+    --dblack: #0A0A0A;
+    --white: #FFFFFF;
+    --black: #000000;
+}
+
+@theme{
+    --font-space: "Space Grotesk";
+    --font-inter: "Inter";
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
