@@ -11,6 +11,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <link rel="stylesheet" href="devicon.min.css">
     <title>Jaime Rodrigo | Software Engineer</title>
   </head>
   <body class="bg-(--white) dark:bg-(--black)">
@@ -155,7 +157,7 @@
                     sm:
                     md:flex-row">
           <button id="explore" class="flex justify-center items-center max-w-[25%] rounded-2xl border dark:border-white border-black py-4 grow cursor-pointer
-                       dark:bg-white dark:text-black bg-black text-white font-bold text-center
+                       dark:bg-white dark:text-black bg-black text-white font-bold text-center font-space
                        hover:scale-105 duration-300 hover:shadow-[0_0_20px_rgba(59,130,246,0.7),0_0_40px_rgba(59,130,246,0.6)]
                         text-sm
                         sm:text-lg
@@ -163,7 +165,7 @@
                         lg:text-xl">
                   My Works <span class="pl-2 md:text-4xl">&rarr;</span> 
           </button>
-          <button id="learn" class="flex justify-center items-center max-w-[20%] rounded-2xl border px-1  py-4 grow cursor-pointer
+          <button id="learn" class="flex justify-center items-center max-w-[20%] rounded-2xl border px-1  py-4 grow cursor-pointer font-space
                       dark:border-white border-black font-medium hover:shadow-[0_0_20px_rgba(59,130,246,0.7),0_0_40px_rgba(59,130,246,0.6)]
                         hover:scale-105 duration-300 
                         text-sm
@@ -184,6 +186,112 @@
                     hover:shadow-[0_0_35px_rgba(59,130,246,0.7),0_0_60px_rgba(59,130,246,0.6)]
                     transition-all duration-300" 
                     src="/src/assets/picture.jpg" alt="">
+    </section>
+
+    <section id="about" class="flex flex-col items-center justify-center w-full h-full dark:bg-(--black) bg-(--white) mt-[15dvh]  dark:text-(--white) text-(--black) font-space
+                              md:flex-row">
+      <div class="flex flex-col max-w-[80%] md:max-w-[80%] ">
+        <div class="flex flex-col gap-4 items-center justify-center">
+          <p class="text-3xl font-bold 
+                    md:text-4xl
+                    lg:text-5xl">ABOUT ME</p>
+          <p class="text-xl text-center font-bold pb-5
+                    md:text-2xl
+                    lg:text-3xl">Passionate about building technology that matters.</p>
+          <p class="text-lg text-center font-semibold pb-10
+                    md:text-lg 
+                    lg:text-2xl">I'm a full-stack engineer with a passion for clean architecture and scalable systems. <br> Over the years, I've built everything from high-performance APIs to responsive user interfaces. <br> My philosophy centers on writing code that's not just functional, but maintainable, secure, and efficient.</p>
+        </div>
+        <div class="flex flex-col sm:flex-row items-start justify-center 
+                    sm:gap-5
+                    lg:gap-20">
+          <div class="flex flex-col justify-center gap-3 mb-10 md:mb-0">
+            <p class="text-3xl font-bold pb-5 text-center
+                      md:text-4xl
+                      lg:text-5xl">Quick Facts</p>
+            <div class="flex flex-col gap-2 rounded-2xl p-3 items-start h-[30%]
+                        dark:bg-(--white) dark:text-(--black) text-(--white) bg-(--black)
+                        lg:p-5">
+              <p class="text-lg font-extrabold
+                        md:text-xl
+                        lg:text-2xl">⚙️ Core Philosophy</p>
+              <p class="text-base font-semibold
+                        md:text-lg
+                        lg:text-xl">Clean Architecture & SOLID principles</p>
+            </div>
+            <div class="flex flex-col gap-2 rounded-2xl p-3 items-start
+                        dark:bg-(--white) dark:text-(--black) text-(--white) bg-(--black)
+                        lg:p-5">
+              <p class="text-lg font-extrabold
+                        md:text-xl
+                        lg:text-2xl">⚡Current Focus</p>
+              <p class="text-base font-semibold
+                        md:text-lg
+                        lg:text-xl">Modern reactive state management & API optimization</p>
+            </div>
+            <div class="flex flex-col gap-2 rounded-2xl p-3 items-start
+                        dark:bg-(--white) dark:text-(--black) text-(--white) bg-(--black)
+                        lg:p-5">
+              <p class="text-lg font-extrabold
+                        md:text-xl
+                        lg:text-2xl">🔒 Side Quests</p>
+              <p class="text-base font-semibold
+                        md:text-lg
+                        lg:text-xl"> Exploring defensive security & cloud hardening</p>
+            </div>
+          </div>
+
+            <div class=" flex flex-col gap-3 mb-10 md:mb-0">
+              <p class="text-3xl font-bold pb-5 text-center
+                        md:text-4xl
+                        lg:text-5xl">Tech Stack</p>
+              <div  class="flex flex-col gap-2 rounded-2xl p-3 items-start
+                            dark:bg-(--white) dark:text-(--black) text-(--white) bg-(--black)
+                            lg:p-5">
+                <p class="text-lg font-extrabold
+                          md:text-xl">Back-End</p>
+                <p class="text-base font-semibold
+                          md:text-lg
+                          lg:text-xl">
+                  <i class="devicon-dotnetcore-plain"></i>.NET Core / ASP.NET |
+                  <i class="devicon-csharp-plain"></i> C# |
+                  <i class="devicon-azuresqldatabase-plain"></i>  SQL Server 
+                </p>
+              </div>
+              <div class="flex flex-col gap-2 rounded-2xl p-3 items-start
+                            dark:bg-(--white) dark:text-(--black) text-(--white) bg-(--black)
+                            lg:p-5">
+                <p class="text-lg font-extrabold
+                          md:text-xl
+                          lg:text-2xl">Front-End</p>
+                <p class="text-base font-semibold
+                          md:text-lg
+                          lg:text-xl">
+                  <i class="devicon-typescript-plain"></i> TypeScript |
+                  <i class="devicon-react-original"></i> React |
+                  <i class="devicon-angularjs-plain"></i> Angular |
+                  <i class="devicon-tailwindcss-original"></i> Tailwind CSS</p>
+              </div>
+              <div class="flex flex-col gap-2 rounded-2xl p-3 items-start
+                            dark:bg-(--white) dark:text-(--black) text-(--white) bg-(--black)
+                            lg:p-5">
+                <p class="text-lg font-extrabold
+                          md:text-xl
+                          lg:text-2xl ">DevOps & Tools</p>
+                <p class="text-base font-semibold
+                          md:text-lg
+                          lg:text-xl">
+                  <i class="devicon-docker-plain"></i> Docker |
+                  <i class="devicon-kubernetes-plain"></i> Kubernetes |
+                  <i class="devicon-linux-plain"></i> Linux |
+                  <i class="devicon-git-plain"></i> Git</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        
+      
     </section>
 
     <footer>
