@@ -14,7 +14,70 @@
     <title>Jaime Rodrigo | Software Engineer</title>
   </head>
   <body class="bg-(--white) dark:bg-(--black)">
-    <nav class="hidden
+
+    <!--Mobile Nav-->
+   <nav class="fixed top-0 z-50 flex md:hidden items-center justify-between
+            w-full h-[10dvh]
+            px-10
+            bg-(--white) dark:bg-(--dblack)/90
+            border-b border-gray-700">
+
+      <a href="#" class="dark:text-(--white) text-(--black) font-bold text-xl">
+        DELTA.DEV
+      </a>
+
+      <button id="menuBtn" class="dark:text-(--white) text-(--black) text-3xl">
+        ☰
+      </button>
+    </nav>
+
+    <!-- Overlay -->
+    <div id="overlay"
+        class="fixed inset-0 bg-black/50 z-40 hidden md:hidden">
+    </div>
+
+    <!-- Sidebar -->
+    <aside id="sidebar"
+          class="fixed top-0 -right-full
+                  w-[75%] max-w-75
+                  h-screen
+                  z-50
+                  transition-all duration-300
+                  bg-(--white)
+                  dark:bg-(--dblack)
+                  dark:text-(--white)
+                  text-(--black)
+                  border-l border-gray-700
+                  md:hidden">
+
+      <div class="flex justify-end p-5">
+        <button id="closeBtn" class="text-3xl">
+          ✕
+        </button>
+      </div>
+
+      <div class="flex flex-col gap-8 px-8 mt-8 text-lg">
+
+        <a href="#about" class="dark:text-(--white) text-(--black)">About Me</a>
+
+        <a href="#proj" class="dark:text-(--white) text-(--black)">Projects</a>
+
+        <a href="#contact" class="dark:text-(--white) text-(--black)">Contact</a>
+
+        <button id="themeButtonMobile"
+                class="flex items-center gap-3 border rounded-lg p-2 w-fit">
+          <img src="/src/assets/light.png"
+              alt=""
+              class="w-8"
+              id="themeImageMobile">
+        </button>
+
+      </div>
+
+    </aside>
+
+    <!--PC Nav-->
+    <nav class="hidden 
                 fixed z-50 md:flex items-center justify-between 
                 top-0 w-dvw h-[10dvh]
                 bg-(--white) dark:bg-(--dblack)/60 opacity-90
@@ -77,7 +140,7 @@
     </nav>
 
     <section class="flex flex-col px-7 lg:px-20 min-w-dvw min-h-[90dvh] items-center justify-center gap-[5%] dark:text-(--white) text-(--black) 
-                    mt-[10dvh]
+                    mt-[20dvh]
                     md:flex-row">
       <div class="flex items-center gap-15 
                   flex-col">
@@ -91,19 +154,21 @@
         <div class="flex justify-center gap-[5%] w-full
                     sm:
                     md:flex-row">
-          <button id="explore" class="flex justify-center items-center max-w-[30%] rounded-2xl border dark:border-white border-black py-4 grow cursor-pointer
+          <button id="explore" class="flex justify-center items-center max-w-[25%] rounded-2xl border dark:border-white border-black py-4 grow cursor-pointer
                        dark:bg-white dark:text-black bg-black text-white font-bold text-center
                        hover:scale-105 duration-300 hover:shadow-[0_0_20px_rgba(59,130,246,0.7),0_0_40px_rgba(59,130,246,0.6)]
-                        text-lg
+                        text-sm
+                        sm:text-lg
                         md:text-lg
                         lg:text-xl">
-                  My Works <span class="pl-3 text-4xl">&rarr;</span> 
+                  My Works <span class="pl-2 md:text-4xl">&rarr;</span> 
           </button>
-          <button id="learn" class="flex justify-center items-center max-w-[20%] rounded-2xl border  py-4 grow cursor-pointer
+          <button id="learn" class="flex justify-center items-center max-w-[20%] rounded-2xl border px-1  py-4 grow cursor-pointer
                       dark:border-white border-black font-medium hover:shadow-[0_0_20px_rgba(59,130,246,0.7),0_0_40px_rgba(59,130,246,0.6)]
                         hover:scale-105 duration-300 
-                        text-lg
-                        md:text-base
+                        text-sm
+                        sm:text-lg
+                        md:text-lg
                         lg:text-xl">
             Learn More
           </button>

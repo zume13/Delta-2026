@@ -1,23 +1,40 @@
-const themeButton = document.getElementById('themeButton');
+//import { projects as data } from './projects';
+import { themeClickListeners, loadSavedTheme, scrollToViewListener, closeSideBars } from "./utils";
+
+const themeButton = document.getElementById('themeButton') as HTMLButtonElement;
 const themeImage = document.getElementById('themeImage') as HTMLImageElement;
+const themeButtonMobile = document.getElementById('themeButtonMobile') as HTMLButtonElement;
+const themeImageMobile  = document.getElementById('themeImageMobile') as HTMLImageElement;
+const menuBtn = document.getElementById('menuBtn');
+const closeBtn = document.getElementById('closeBtn');
+const sidebar = document.getElementById('sidebar');
+const overlay = document.getElementById('overlay');
+const about = document.getElementById('about');
+const proj = document.getElementById('proj');
+const explore = document.getElementById('explore') as HTMLButtonElement;
+const learn = document.getElementById('learn') as HTMLButtonElement;
 
-const explore = document.getElementById('explore');
+export function openSidebar() {
+  sidebar?.classList.remove("right-[-100%]");
+  sidebar?.classList.add("right-0");
 
-    explore?.addEventListener('click', () => {
-        document.getElementById('proj')?.scrollIntoView({behavior:"smooth"})
-    })
+  overlay?.classList.remove("hidden");
+}
 
-const learn = document.getElementById('learn');
+export function closeSidebar() {
+  sidebar?.classList.remove("right-0");
+  sidebar?.classList.add("right-[-100%]");
 
-    learn?.addEventListener('click', () => {
-     document.getElementById('about')?.scrollIntoView({behavior:"smooth"})
-})
+  overlay?.classList.add("hidden");
+}
+
+menuBtn?.addEventListener("click", openSidebar);
 
 function updateContent(){
 
     if(window.matchMedia("(max-width: 1200px").matches){
         if(explore){
-            explore.innerHTML = 'Projects <span class="pl-3 text-4xl">&rarr;</span>'
+            explore.innerHTML = 'Projects <span class=" sm:pl-2 text-xl sm:text-2xl md:text-2xl">&rarr;</span>'
         }
         if(learn){
             learn.innerHTML = 'More'
@@ -25,7 +42,7 @@ function updateContent(){
     }
     else{
         if(explore){
-            explore.innerHTML = 'My Works <span class="pl-3 text-4xl">&rarr;</span>'
+            explore.innerHTML = 'My Works <span class="pl-2 md:text-4xl">&rarr;</span>'
         }
         if(learn){
             learn.innerHTML = 'Learn More'
@@ -34,21 +51,9 @@ function updateContent(){
 
 }
 
-const toggleTheme = () => {
-    
-    const isDark = document.documentElement.classList.toggle('dark');
-
-    themeImage.src = isDark ? '/src/assets/light.png' : '/src/assets/dark.png';
-
-    localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light')
-
-}
-
-themeButton?.addEventListener('click', toggleTheme);
-
-if(localStorage.getItem('theme') === 'dark'){
-    document.documentElement.classList.add('dark')
-}
-
+closeSideBars([overlay!, closeBtn!]);
+scrollToViewListener([{clicked: explore, to: proj!}, {clicked: learn, to: about!}]);
+themeClickListeners([{button: themeButton, image: themeImage}, {button: themeButtonMobile, image: themeImageMobile}]);
+loadSavedTheme();
 updateContent();
 window.addEventListener('resize', updateContent);
