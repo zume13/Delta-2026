@@ -4,6 +4,6 @@ export type themePair = {
 };
 
 export type scrollPair = {
-    clicked : HTMLButtonElement;
+    clicked : HTMLButtonElement | HTMLAnchorElement;
     to : HTMLElement;
 }

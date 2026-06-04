@@ -1,5 +1,4 @@
-//import { projects as data } from './projects';
-import { themeClickListeners, loadSavedTheme, scrollToViewListener, closeSideBars } from "./utils";
+import { themeClickListeners, loadSavedTheme, scrollToViewListener, closeSideBars, renderProjectCards } from "./utils";
 
 const themeButton = document.getElementById('themeButton') as HTMLButtonElement;
 const themeImage = document.getElementById('themeImage') as HTMLImageElement;
@@ -11,8 +10,21 @@ const sidebar = document.getElementById('sidebar');
 const overlay = document.getElementById('overlay');
 const about = document.getElementById('about');
 const proj = document.getElementById('proj');
+const contact = document.getElementById('contact');
+const hero = document.getElementById('hero');
 const explore = document.getElementById('explore') as HTMLButtonElement;
 const learn = document.getElementById('learn') as HTMLButtonElement;
+const aboutLink = document.getElementById('aboutLink') as HTMLAnchorElement;
+const projLink = document.getElementById('projLink') as HTMLAnchorElement;
+const contactLink = document.getElementById('contactLink') as HTMLAnchorElement;
+const heroLink = document.getElementById('heroLink') as HTMLAnchorElement;
+const aboutMobile = document.getElementById('aboutMobile') as HTMLAnchorElement;
+const projMobile = document.getElementById('projMobile') as HTMLAnchorElement;
+const contactMobile = document.getElementById('contactMobile') as HTMLAnchorElement;
+const heroMobile = document.getElementById('heroMobile') as HTMLAnchorElement;
+const container = document.getElementById('projContainer');
+
+renderProjectCards(container!);
 
 export function openSidebar() {
   sidebar?.classList.remove("right-[-100%]");
@@ -52,8 +64,22 @@ function updateContent(){
 }
 
 closeSideBars([overlay!, closeBtn!]);
-scrollToViewListener([{clicked: explore, to: proj!}, {clicked: learn, to: about!}]);
-themeClickListeners([{button: themeButton, image: themeImage}, {button: themeButtonMobile, image: themeImageMobile}]);
+scrollToViewListener([
+                        {clicked: explore, to: proj!}, 
+                        {clicked: learn, to: about!}, 
+                        {clicked: heroLink!, to: hero!}, 
+                        {clicked: aboutLink!, to: about!}, 
+                        {clicked: projLink, to: proj!}, 
+                        {clicked: contactLink, to: contact!},
+                        {clicked: heroMobile, to: hero!},
+                        {clicked: aboutMobile, to: about!}, 
+                        {clicked: projMobile, to: proj!},
+                        {clicked: contactMobile, to: contact!}
+                    ]);
+themeClickListeners([
+                        {button: themeButton, image: themeImage}, 
+                        {button: themeButtonMobile, image: themeImageMobile}
+                    ]);
 loadSavedTheme();
 updateContent();
 window.addEventListener('resize', updateContent);

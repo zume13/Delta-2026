@@ -21,11 +21,11 @@
    <nav class="fixed top-0 z-50 flex md:hidden items-center justify-between
             w-full h-[10dvh]
             px-10
-            bg-(--white) dark:bg-(--dblack)/90
+            bg-(--white)/90 dark:bg-(--dblack)/90
             border-b border-gray-700">
 
-      <a href="#" class="dark:text-(--white) text-(--black) font-bold text-xl">
-        DELTA.DEV
+      <a id="heroMobile" class="dark:text-(--white) text-(--black) font-bold text-xl">
+        DELTA<span class="text-blue-500">.DEV</span>
       </a>
 
       <button id="menuBtn" class="dark:text-(--white) text-(--black) text-3xl">
@@ -60,11 +60,11 @@
 
       <div class="flex flex-col gap-8 px-8 mt-8 text-lg">
 
-        <a href="#about" class="dark:text-(--white) text-(--black)">About Me</a>
+        <a id="aboutMobile" class="dark:text-(--white) text-(--black)">About Me</a>
 
-        <a href="#proj" class="dark:text-(--white) text-(--black)">Projects</a>
+        <a id="projMobile" class="dark:text-(--white) text-(--black)">Projects</a>
 
-        <a href="#contact" class="dark:text-(--white) text-(--black)">Contact</a>
+        <a id="contactMobile" class="dark:text-(--white) text-(--black)">Contact</a>
 
         <button id="themeButtonMobile"
                 class="flex items-center gap-3 border rounded-lg p-2 w-fit">
@@ -78,11 +78,11 @@
 
     </aside>
 
-    <!--PC Nav-->
-    <nav class="hidden 
+    <!--PC Nav-->                                                 
+    <nav class="hidden                                                                                
                 fixed z-50 md:flex items-center justify-between 
                 top-0 w-dvw h-[10dvh]
-                bg-(--white) dark:bg-(--dblack)/60 opacity-90
+                bg-(--white)/90 dark:bg-(--dblack)/90 
                 dark:text-(--white) text-(--black)
                 border-b border-gray-700
                 ">
@@ -90,13 +90,14 @@
                   text-lg font-bold
                   md:text-xl 
                   lg:text-3xl">
-        <a href="#">DELTA.DEV</a>
+        <a id="heroLink" class="cursor-pointer" >DELTA<span class="text-blue-500">.DEV</span></a>
       </div>
       <div class="flex left-0 gap-x-10 items-center max-w-fit mr-[10%]
                   text-md font-medium
                   md:text-lg
                   lg:2xl">
-        <a href="about" class="relative
+        <a id="aboutLink"  class="relative
+                      cursor-pointer
                       after:absolute
                       after:left-0
                       after:bottom-0
@@ -109,7 +110,8 @@
                       hover:after:w-full">
           About Me
         </a>
-        <a href="#proj" class="relative
+        <a id="projLink" class="relative
+                      cursor-pointer
                       after:absolute
                       after:left-0
                       after:bottom-0
@@ -122,7 +124,8 @@
                       hover:after:w-full">
           Projects
         </a>
-        <a href="#contact" class="relative
+        <a id="contactLink" class="relative
+                      cursor-pointer
                       after:absolute
                       after:left-0
                       after:bottom-0
@@ -141,12 +144,13 @@
       </div>
     </nav>
 
-    <section class="flex flex-col px-7 lg:px-20 min-w-dvw min-h-[90dvh] items-center justify-center gap-[5%] dark:text-(--white) text-(--black) 
-                    mt-[20dvh]
+    <!--Hero-->                                                                                                                         
+    <section id="hero" class="flex flex-col px-7 scroll-mt-[15dvh] lg:scroll-mt-[20dvh] lg:px-20 min-w-dvw min-h-[90dvh] items-center justify-center gap-[5%] dark:text-(--white) text-(--black) 
+                    mt-[20dvh]                                      
                     md:flex-row">
       <div class="flex items-center gap-15 
-                  flex-col">
-        <p class="text-6xl font-bold text-wrap font-space text-center
+                  flex-col">                                                                                                                                                                                                                                                                              
+        <p class="text-6xl font-bold text-wrap font-space text-center                                                           
                   md:text-6xl
                   lg:text-8xl">Full Stack Engineer</p>
         <p class="text-center font-inter text-lg
@@ -188,72 +192,75 @@
                     src="/src/assets/picture.jpg" alt="">
     </section>
 
-    <section id="about" class="flex flex-col items-center justify-center w-full h-full dark:bg-(--black) bg-(--white) mt-[15dvh]  dark:text-(--white) text-(--black) font-space
+    <!--About-->  
+    <section id="about" class="flex flex-col scroll-mt-[15dvh] items-center justify-center w-full h-full dark:bg-(--black) bg-(--white) mt-[15dvh]  dark:text-(--white) text-(--black) font-space
+                              sm:flex-col
                               md:flex-row">
-      <div class="flex flex-col max-w-[80%] md:max-w-[80%] ">
+      <div class="flex flex-col max-w-[85%] md:max-w-[90%] ">
         <div class="flex flex-col gap-4 items-center justify-center">
           <p class="text-3xl font-bold 
                     md:text-4xl
-                    lg:text-5xl">ABOUT ME</p>
+                    lg:text-6xl">ABOUT ME</p>
           <p class="text-xl text-center font-bold pb-5
                     md:text-2xl
-                    lg:text-3xl">Passionate about building technology that matters.</p>
+                    lg:text-4xl">Passionate about building technology that matters.</p>
           <p class="text-lg text-center font-semibold pb-10
                     md:text-lg 
-                    lg:text-2xl">I'm a full-stack engineer with a passion for clean architecture and scalable systems. <br> Over the years, I've built everything from high-performance APIs to responsive user interfaces. <br> My philosophy centers on writing code that's not just functional, but maintainable, secure, and efficient.</p>
+                    lg:text-3xl">I'm a full-stack engineer with a passion for clean architecture and scalable systems. <br> Over the years, I've built everything from high-performance APIs to responsive user interfaces. <br> My philosophy centers on writing code that's not just functional, but maintainable, secure, and efficient.</p>
         </div>
-        <div class="flex flex-col sm:flex-row items-start justify-center 
+        <div class="flex flex-col sm:flex-row items-center justify-center 
                     sm:gap-5
                     lg:gap-20">
           <div class="flex flex-col justify-center gap-3 mb-10 md:mb-0">
             <p class="text-3xl font-bold pb-5 text-center
                       md:text-4xl
-                      lg:text-5xl">Quick Facts</p>
+                      lg:text-6xl">Quick Facts</p>
             <div class="flex flex-col gap-2 rounded-2xl p-3 items-start h-[30%]
                         dark:bg-(--white) dark:text-(--black) text-(--white) bg-(--black)
                         lg:p-5">
               <p class="text-lg font-extrabold
                         md:text-xl
-                        lg:text-2xl">⚙️ Core Philosophy</p>
+                        lg:text-3xl">⚙️ Core Philosophy</p>
               <p class="text-base font-semibold
                         md:text-lg
-                        lg:text-xl">Clean Architecture & SOLID principles</p>
+                        lg:text-2xl">Clean Architecture & SOLID principles</p>
             </div>
             <div class="flex flex-col gap-2 rounded-2xl p-3 items-start
                         dark:bg-(--white) dark:text-(--black) text-(--white) bg-(--black)
                         lg:p-5">
               <p class="text-lg font-extrabold
                         md:text-xl
-                        lg:text-2xl">⚡Current Focus</p>
+                        lg:text-3xl">⚡Current Focus</p>
               <p class="text-base font-semibold
                         md:text-lg
-                        lg:text-xl">Modern reactive state management & API optimization</p>
+                        lg:text-2xl">Modern reactive state management & API optimization</p>
             </div>
             <div class="flex flex-col gap-2 rounded-2xl p-3 items-start
                         dark:bg-(--white) dark:text-(--black) text-(--white) bg-(--black)
                         lg:p-5">
               <p class="text-lg font-extrabold
                         md:text-xl
-                        lg:text-2xl">🔒 Side Quests</p>
+                        lg:text-3xl">🔒 Side Quests</p>
               <p class="text-base font-semibold
                         md:text-lg
-                        lg:text-xl"> Exploring defensive security & cloud hardening</p>
+                        lg:text-2xl"> Exploring defensive security & cloud hardening</p>
             </div>
           </div>
 
             <div class=" flex flex-col gap-3 mb-10 md:mb-0">
               <p class="text-3xl font-bold pb-5 text-center
                         md:text-4xl
-                        lg:text-5xl">Tech Stack</p>
+                        lg:text-6xl">Tech Stack</p>
               <div  class="flex flex-col gap-2 rounded-2xl p-3 items-start
                             dark:bg-(--white) dark:text-(--black) text-(--white) bg-(--black)
                             lg:p-5">
                 <p class="text-lg font-extrabold
-                          md:text-xl">Back-End</p>
+                          md:text-xl
+                          lg:text-3xl">Back-End</p>
                 <p class="text-base font-semibold
                           md:text-lg
-                          lg:text-xl">
-                  <i class="devicon-dotnetcore-plain"></i>.NET Core / ASP.NET |
+                          lg:text-2xl">
+                  <i class="devicon-dotnetcore-plain"></i>.NET Core |
                   <i class="devicon-csharp-plain"></i> C# |
                   <i class="devicon-azuresqldatabase-plain"></i>  SQL Server 
                 </p>
@@ -263,10 +270,10 @@
                             lg:p-5">
                 <p class="text-lg font-extrabold
                           md:text-xl
-                          lg:text-2xl">Front-End</p>
+                          lg:text-3xl">Front-End</p>
                 <p class="text-base font-semibold
                           md:text-lg
-                          lg:text-xl">
+                          lg:text-2xl">
                   <i class="devicon-typescript-plain"></i> TypeScript |
                   <i class="devicon-react-original"></i> React |
                   <i class="devicon-angularjs-plain"></i> Angular |
@@ -277,10 +284,10 @@
                             lg:p-5">
                 <p class="text-lg font-extrabold
                           md:text-xl
-                          lg:text-2xl ">DevOps & Tools</p>
+                          lg:text-3xl ">DevOps & Tools</p>
                 <p class="text-base font-semibold
                           md:text-lg
-                          lg:text-xl">
+                          lg:text-2xl">
                   <i class="devicon-docker-plain"></i> Docker |
                   <i class="devicon-kubernetes-plain"></i> Kubernetes |
                   <i class="devicon-linux-plain"></i> Linux |
@@ -290,12 +297,30 @@
 
           </div>
         </div>
-        
-      
     </section>
 
-    <footer>
+    <!--Projects-->  
+    <section id="proj" class="flex flex-col scroll-mt-[15dvh] gap-4 items-center justify-center w-full h-full dark:bg-(--black) bg-(--white) mt-[15dvh]  dark:text-(--white) text-(--black) font-space">
+      <div class="flex gap-2 flex-col text-start w-[90%]">
+        <p class="text-3xl font-bold 
+                    md:text-4xl
+                    lg:text-6xl">Featured Projects</p>
+        <p class="text-lg font-bold pb-5
+                    md:text-xl
+                    lg:text-3xl">Crafting solutions that scale and perform.</p>
+      </div>
+      <div id="projContainer" class="flex flex-col flex-wrap gap-8 w-full items-center justify-center
+                                    md:flex-row
+                                    lg:flex-row">
+      </div>
+    </section>
 
+    <footer class="border-t border-zinc-800 dark:bg-(--black) bg-(--white) mt-10">
+        <div class="border-t border-zinc-800 py-6">
+          <div class="flex flex-col items-center justify-center gap-3 text-center text-sm dark:text-(--white) text-(--black) font-medium md:text-base lg:text-xl">
+            <p>© 2026 Delta.Dev. All rights reserved.</p>
+          </div>
+        </div>
     </footer>
 
     <script type="module" src="/src/main.ts"></script>
