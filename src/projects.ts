@@ -10,7 +10,7 @@ export const projects = [
     {
         'imagePath': './src/assets/projects/Game.jpg',
         'title': 'Javascript Game',
-        'desc': ' A web Javascript hosted game. Inspired by the traditional game we grew up playing.',
+        'desc': ' A Javascript web hosted game. Inspired by the traditional game we grew up playing.',
         'stacks': ['HTML', "CSS", 'Javascript', 'Git', 'GitHub'],
         'code': 'https://github.com/zume13/Rock-Paper-Scissors-Game-',
         'demo': "https://zume13.github.io/Rock-Paper-Scissors-Game-/"

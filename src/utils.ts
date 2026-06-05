@@ -113,3 +113,7 @@ export function renderProjectCards(target : HTMLElement){
         `
     ).join("")
 }
+
+//export sendEmail(){
+
+//}
