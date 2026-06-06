@@ -1,6 +1,11 @@
 import type { themePair, scrollPair } from "./type";
 import { closeSidebar } from './main';
 import { projects, devIcons } from "./projects";
+import emailjs  from "@emailjs/browser";
+
+const service = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+const template = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+const key = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
 export const toggleTheme = (target : HTMLImageElement) => {
     
@@ -114,6 +119,25 @@ export function renderProjectCards(target : HTMLElement){
     ).join("")
 }
 
-//export sendEmail(){
+export function sendEmail(formData : FormData){
 
-//}
+    const name = formData.get('name');
+    const email = formData.get('email');;
+    const message = formData.get('message');
+
+    if(!name || !email || !message){
+        throw new Error('Missing Fields');
+    }
+
+    console.log(name, email, message);
+
+    emailjs.send(service, template, 
+        {
+            name: name.toString(),
+            email: email.toString(),
+            message: message.toString()
+        }, 
+        key);
+}
+
+
