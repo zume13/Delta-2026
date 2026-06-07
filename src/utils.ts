@@ -30,11 +30,16 @@ export const themeClickListeners = (pairs : themePair[]) => {
     }
 }
 
-export function loadSavedTheme(){
+export function loadSavedTheme(target : HTMLImageElement){
+
+    
     if(localStorage.getItem('theme') === 'dark'){
         document.documentElement.classList.add('dark');
+        target.src = lightIcon;
+        
     }else{
         document.documentElement.classList.remove('dark');
+        target.src = darkIcon;
     }
 }
 
