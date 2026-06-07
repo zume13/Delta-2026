@@ -10,7 +10,7 @@ const key = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 export const toggleTheme = (target : HTMLImageElement) => {
     
     const isDark = document.documentElement.classList.toggle('dark');
-        target.src = isDark ? '/src/assets/light.png' : '/src/assets/dark.png';
+        target.src = isDark ? './src/assets/light.png' : './src/assets/dark.png';
   
     localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light')
 
@@ -134,7 +134,7 @@ export async function sendEmail (formData : FormData, successT : HTMLElement, er
         if (website?.toString().trim()) {
             throw new Error('Spam detected');
         }
-        
+
         await emailjs.send
             (service, template, 
                 {
