@@ -32,6 +32,8 @@ const cd = 120 * 1000;
 form?.addEventListener('submit', async (e) =>{
     e.preventDefault();
  
+    submitBtn.disabled = true;
+
     const lastSubmit = localStorage.getItem('lastSubmit');
     if(lastSubmit){
       const elapsed = Date.now() - Number(lastSubmit);
