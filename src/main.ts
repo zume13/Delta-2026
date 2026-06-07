@@ -115,6 +115,6 @@ themeClickListeners([
                         {button: themeButton, image: themeImage}, 
                         {button: themeButtonMobile, image: themeImageMobile}
                     ]);
-loadSavedTheme();
+loadSavedTheme([themeImage, themeImageMobile]);
 setInterval(updateBtn, 1000);
 updateBtn();
