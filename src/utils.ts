@@ -2,6 +2,8 @@ import type { themePair, scrollPair } from "./type";
 import { closeSidebar } from './main';
 import { projects, devIcons } from "./projects";
 import emailjs  from "@emailjs/browser";
+import lightIcon from '../src/assets/light.png';
+import darkIcon from '../src/assets/dark.png';
 
 const service = import.meta.env.VITE_EMAILJS_SERVICE_ID;
 const template = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
@@ -10,7 +12,7 @@ const key = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 export const toggleTheme = (target : HTMLImageElement) => {
     
     const isDark = document.documentElement.classList.toggle('dark');
-        target.src = isDark ? './src/assets/light.png' : './src/assets/dark.png';
+        target.src = isDark ? lightIcon : darkIcon;
   
     localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light')
 
