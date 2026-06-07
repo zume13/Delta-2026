@@ -124,11 +124,17 @@ export async function sendEmail (formData : FormData, successT : HTMLElement, er
     const name = formData.get('name');
     const email = formData.get('email');;
     const message = formData.get('message');
+    const website = formData.get('website');
 
     try{
          if(!name || !email || !message){
             throw new Error('Missing Fields');
             }
+
+        if (website?.toString().trim()) {
+            throw new Error('Spam detected');
+        }
+        
         await emailjs.send
             (service, template, 
                 {

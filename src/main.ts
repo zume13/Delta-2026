@@ -42,6 +42,17 @@ form?.addEventListener('submit', async (e) =>{
       }
     }
 
+     const token = (
+        document.querySelector(
+            '[name="cf-turnstile-response"]'
+        ) as HTMLInputElement
+    )?.value;
+
+    if (!token) {
+        alert('Please complete the verification.');
+        return;
+    }
+
     const formData = new FormData(form);
     const success =  await sendEmail(formData, successT, errorT);
 

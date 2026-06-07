@@ -795,6 +795,8 @@
                         class="w-full mx-auto lg:text-lg border-2 dark:border-(--white) border-(--black) px-4 py-2"></textarea>
             </div>
 
+            <input type="text" name="website" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true">
+
             <button id="submitBtn" type="submit" class="w-full border-2 cursor-pointer border-(--black) px-4 py-2  font-extrabold mx-auto
                                         duration-300 transition-all
                                         dark:bg-(--white) dark:text-(--black) dark:hover:bg-(--black) bg-(--black) text-(--white) hover:bg-(--white) 
@@ -802,6 +804,7 @@
                                         lg:text-2xl">
               Send Message
             </button>
+            <div class="cf-turnstile" data-sitekey="0x4AAAAAADgS4icnAPgiKaix"></div>
           </form>
         </div>
 
@@ -817,5 +820,6 @@
     </footer>
 
     <script type="module" src="/src/main.ts"></script>
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
   </body>
 </html>
