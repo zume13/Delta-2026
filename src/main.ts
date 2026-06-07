@@ -77,7 +77,7 @@ function updateBtn(){
 
     if(remaining > 0 ){
         submitBtn.disabled = true;
-        submitBtn.textContent = 'Wait';
+        submitBtn.textContent = `Wait ${Math.ceil(remaining/1000)}s`;
     }else{
       submitBtn.disabled = false;
         submitBtn.textContent = 'Send Message';
