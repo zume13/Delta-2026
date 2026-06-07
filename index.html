@@ -120,13 +120,12 @@
       <div class="ml-[15%] 
                   text-lg font-bold
                   md:text-xl 
-                  lg:text-3xl">
+                  lg:text-2xl">
         <a id="heroLink" class="cursor-pointer" >DELTA<span class="text-blue-500">.DEV</span></a>
       </div>
       <div class="flex left-0 gap-x-10 items-center max-w-fit mr-[10%]
                   text-md font-medium
-                  md:text-lg
-                  lg:2xl">
+                  md:text-base">
         <a id="aboutLink"  class="relative
                       cursor-pointer
                       after:absolute
@@ -179,7 +178,7 @@
     <section id="hero" class="scroll-mt-[15dvh] lg:scroll-mt-[25dvh] flex flex-col mt-[15dvh] items-center w-full h-full font-space px-5 gap-6
                     dark:text-(--white) text-(--black)  
                     md:flex-row
-                    lg:px-20 lg:mt-[25dvh]">
+                    lg:px-20 lg:mt-[15dvh]">
       <div class="left flex gap-5 w-full items-center justify-center  mb-10
                   lg:w-[60%] lg:px-10 flex-col">
         <div class="left-top flex items-center gap-5
@@ -229,12 +228,12 @@
                       md:text-xl
                       lg:text-4xl">Connect With Me</p>
             <div class="flex flex-row flex-wrap gap-4 justify-center">
-              <a href="https://www.linkedin.com/in/jaime-rodrigo-21048b2a6/" target="_blank" class="border-2 px-2 py-1 border-gray-800 dark:bg-(--white) dark:text-(--black) bg-(--black) text-(--white) 
+              <a href="https://github.com/zume13" target="_blank" class="border-2 px-2 py-1 border-gray-800 dark:bg-(--white) dark:text-(--black) bg-(--black) text-(--white) 
                         dark:hover:bg-(--black) dark:hover:text-(--white) hover:bg-(--white) hover:text-(--black) font-extrabold
                         transition-all duration-300
                         lg:text-2xl lg:px-3 lg:py-2">
                         <i class="devicon-github-original"></i> GitHub</a>
-              <a href="https://github.com/zume13" target="_blank" class="border-2 px-2 py-1 border-gray-800 dark:bg-(--white) dark:text-(--black) bg-(--black) text-(--white) 
+              <a href="https://www.linkedin.com/in/jaime-rodrigo-21048b2a6/" target="_blank" class="border-2 px-2 py-1 border-gray-800 dark:bg-(--white) dark:text-(--black) bg-(--black) text-(--white) 
                         dark:hover:bg-(--black) dark:hover:text-(--white) hover:bg-(--white) hover:text-(--black) font-extrabold
                         transition-all duration-300
                         lg:text-2xl lg:px-3 lg:py-2">
@@ -271,222 +270,493 @@
       </div>
     </section>
 
-    <section class="scroll-mt-[15dvh] lg:scroll-mt-[25dvh] mt-[15dvh] w-full h-full font-space px-6">
-       <div class="flex flex-col w-full border-2 border-gray-700 dark:bg-white/90 bg-black dark:text-(--black) text-(--white)">
+    <!--Info--> 
+    <section id="about" class="flex flex-col lg:flex-row scroll-mt-[15dvh] lg:scroll-mt-[15dvh] mt-[15dvh] w-full h-full font-space px-6
+                              lg:px-30">
+       <div class="flex flex-col w-full border-2 border-gray-700 dark:bg-(--white) 
+                bg-(--black) dark:text-(--black) text-(--white)
+                lg:w-[70%]">
         <div class="flex flex-col gap-5 px-3 py-3  border-2 border-gray-700">
-          <p class="text-2xl font-bold">ABOUT ME</p>
-          <p class="text-lg font-semibold text-center">
+          <p class="text-2xl font-bold 
+                    lg:text-3xl lg:text-center">ABOUT ME</p>
+          <p class="text-lg font-semibold text-center
+                    lg:text-xl">
             Passionate about building technology that matters.
           </p>
           <p class="text-base font-medium text-justify">
             I'm a full-stack .NET Software Developer with hands-on experience delivering real-world solutions using C#, ASP.NET Core, TypeScript, and Microsoft SQL Server. I have a strong passion for clean architecture and building scalable systems that are secure, maintainable, and efficient.
           </p>
           <p class="text-base font-medium text-justify">
-             My development approach is rooted in proven software engineering practices, including Clean Architecture, CQRS, the Mediator pattern, Object-Oriented Programming (OOP), and SOLID principles. These practices enable me to create high-performance APIs, responsive user interfaces, and robust enterprise applications that are designed for long-term growth and maintainability.
+             My development approach is rooted in proven software engineering practices, including Clean Architecture, CQRS, Object-Oriented Programming (OOP), and SOLID principles. These practices enable me to create high-performance APIs, responsive user interfaces, and robust enterprise applications that are designed for long-term growth and maintainability.
           </p>
           <p class="text-base font-medium text-justify">
             I believe great software goes beyond functionality—it's about writing clean, reliable, and well-structured code that can evolve with business needs. Whether developing back-end services or crafting intuitive front-end experiences, I focus on delivering solutions that balance performance, scalability, and user experience.
           </p>
           <p class="text-base font-medium text-justify">
-            I consistently showcase my work across GitHub, LinkedIn, and Upwork as part of my commitment to continuous learning, professional growth, and excellence within the .NET ecosystem.
+            I consistently showcase my work across <span class="font-extrabold">GitHub</span>, <span class="font-extrabold">LinkedIn</span>, and <span class="font-extrabold">Upwork</span> as part of my commitment to continuous learning, professional growth, and excellence within the .NET ecosystem.
           </p>
         </div>
         <div class="flex flex-col w-full border-2 border-gray-700 dark:bg-white/90 bg-black px-3 py-3 gap-3">
 
-          <div class="flex flex-col gap-2">
+          <div id="proj" class="flex flex-col gap-2 lg:scroll-mt-[15dvh]">
             <div class="flex flex-row items-center justify-between">
-              <p class="text-2xl font-bold">Featured Projects</p>
-              <button class="px-2 py-1 text-sm border-2 border-gray-800
+              <p class="text-2xl font-bold
+                        lg:text-3xl">Featured Projects</p>
+              <button class="px-2 py-1 text-sm border-2 border-gray-800 cursor-pointer
                             dark:bg-(--black) bg-(--white) dark:text-(--white) text-(--black)
-                            dark:hover:bg-(--white) dark:hover:text-(--black) hover:text-(white) hover:bg-(--black)">View all projects</button>
+                            dark:hover:bg-(--white) dark:hover:text-(--black) hover:text-(--white) hover:bg-(--black)">View all</button>
             </div>
             
-            <p class="text-lg font-semibold text-center">Crafting solutions that scale and perform.</p>
+            <p class="text-lg font-semibold text-center
+                      lg:text-xl">Crafting solutions that scale and perform.</p>
           </div>
 
-          <div class="flex flex-col gap-6 border-2 border-gray-700 px-2 py-2 group cursor-crosshair
-                      dark:hover:bg-(--black) hover:bg-(--white)">
+          <div  class="flex flex-col gap-2 justify-center
+                      lg:flex-row lg:flex-wrap">
+            <!--Proj-1--> 
+            <div class="flex flex-col relative gap-6 border-2 border-gray-700 px-2 py-2 group cursor-crosshair group
+                        dark:hover:bg-(--black) hover:bg-(--white)
+                        lg:w-105 lg:h-85 lg:gap-2">
+              <img class="absolute -top-55 left-0 hidden group-hover:flex" src="./src/assets/projects/Codex.jpg" alt="photo">
+              <div class="flex flex-col gap-2">
+                <div class=" flex flex-row w-fit items-center gap-2 px-2 py-1 border-2 border-gray-800
+                            dark:bg-(--black) bg-(--white) dark:text-(--white) text-(--black)
+                            dark:group-hover:bg-(--white) group-hover:bg-(--black)
+                            dark:group-hover:text-(--black) group-hover:text-(--white)">
+                  <div class="w-3 h-3 
+                              dark:bg-(--white) bg-(--black)
+                              dark:group-hover:bg-(--black) group-hover:bg-(--white)">
+                  </div>
+                  <p class="text-base font-semibold
+                            lg:text-sm">School Project</p>
+                </div>
+                <div class="flex flex-col gap-2">
+                  <p class="text-2xl text-center font-bold
+                            dark:group-hover:text-(--white) group-hover:text-(--black)
+                            lg:text-xl">LAND OF DAWN CODEX</p>
+                  <p class="text-base font-semibold text-justify px-1
+                            dark:group-hover:text-(--white) group-hover:text-black">Inspired by the game Mobile Legends: Bang Bang. A website guide for new players to learn about the different strategies in the game.
+                  </p>
+                </div>
+              </div>
+                
+              <div class="flex flex-col">
+                <p class="text-lg font-bold
+                          dark:group-hover:text-(--white) group-hover:text-(--black)">Tech Stack:</p>
+                <div class="flex flex-row flex-wrap gap-2 items-center justify-center">
+                  <div class="flex flex-row items-center gap-1 text-sm font-bold px-2 py-1.5 border-2 border-gray-800
+                            dark:bg-(--black) bg-(--white) dark:text-(--white) text-(--black) transition-all duration-300
+                            dark:hover:bg-(--black) hover:bg-(--white) dark:hover:text-(--white) hover:text-(--black)
+                            dark:group-hover:text-(--black) group-hover:text-(--white) dark:group-hover:bg-(--white) group-hover:bg-(--black)
+                            lg:text-xs"><i class="devicon-html5-plain"></i> | HTML
+                  </div>
+                  <div class="flex flex-row items-center gap-1 text-sm font-bold px-2 py-1.5 border-2 border-gray-800
+                            dark:bg-(--black) bg-(--white) dark:text-(--white) text-(--black) transition-all duration-300
+                            dark:hover:bg-(--black) hover:bg-(--white) dark:hover:text-(--white) hover:text-(--black)
+                            dark:group-hover:text-(--black) group-hover:text-(--white) dark:group-hover:bg-(--white) group-hover:bg-(--black)
+                            lg:text-xs"><i class="devicon-css3-plain"></i> | CSS
+                  </div>
+                  <div class="flex flex-row items-center gap-1 text-sm font-bold px-2 py-1.5 border-2 border-gray-800
+                            dark:bg-(--black) bg-(--white) dark:text-(--white) text-(--black) transition-all duration-300
+                            dark:hover:bg-(--black) hover:bg-(--white) dark:hover:text-(--white) hover:text-(--black)
+                            dark:group-hover:text-(--black) group-hover:text-(--white) dark:group-hover:bg-(--white) group-hover:bg-(--black)
+                            lg:text-xs"><i class="devicon-javascript-plain"></i> | Javascript
+                  </div>
+                  <div class="flex flex-row items-center gap-1 text-sm font-bold px-2 py-1.5 border-2 border-gray-800
+                            dark:bg-(--black) bg-(--white) dark:text-(--white) text-(--black) transition-all duration-300
+                            dark:hover:bg-(--black) hover:bg-(--white) dark:hover:text-(--white) hover:text-(--black)
+                            dark:group-hover:text-(--black) group-hover:text-(--white) dark:group-hover:bg-(--white) group-hover:bg-(--black)
+                            lg:text-xs"><i class="devicon-git-plain"></i> | Git
+                  </div>
+                  <div class="flex flex-row items-center gap-1 text-sm font-bold px-2 py-1.5 border-2 border-gray-800
+                            dark:bg-(--black) bg-(--white) dark:text-(--white) text-(--black) transition-all duration-300
+                            dark:hover:bg-(--black) hover:bg-(--white) dark:hover:text-(--white) hover:text-(--black)
+                            dark:group-hover:text-(--black) group-hover:text-(--white) dark:group-hover:bg-(--white) group-hover:bg-(--black)
+                            lg:text-xs"><i class="devicon-github-original"></i> | GitHub
+                  </div>
+                </div>
+                
+              </div>
+                <div class="flex flex-row gap-2 items-center my-auto">
+                  <a class="text-sm font-bold px-2 py-1.5 border-2 border-gray-800
+                            dark:bg-(--black) bg-(--white) dark:text-(--white) text-(--black) transition-all duration-300
+                            dark:hover:bg-(--white) hover:bg-(--black) dark:hover:text-(--black) hover:text-(--white)
+                            lg:text-xs" target="_blank" href="https://github.com/zume13/Land-Of-Dawn-Codex" target="_blank">Code Base &rarr;</a>
+                  |
+                  <a class="text-sm font-bold px-2 py-1.5 border-2 border-gray-800
+                            dark:bg-(--white) bg-(--black) dark:text-(--black) text-(--white) transition-all duration-300
+                            dark:hover:bg-(--black) hover:bg-(--white) dark:hover:text-(--white) hover:text-(--black)
+                            lg:text-xs" target="_blank" href="https://zume13.github.io/Land-Of-Dawn-Codex/">Live Demo &rarr;</a>
+                </div>
+            </div>
 
-            <div class="flex flex-col gap-2">
-              <div class=" flex flex-row w-fit items-center gap-2 px-2 py-1 border-2 border-gray-800
-                          dark:bg-(--black) bg-(--white) dark:text-(--white) text-(--black)
-                          dark:group-hover:bg-(--white) group-hover:bg-(--black)
-                          dark:group-hover:text-(--black) group-hover:text-(--white)">
-                <div class="w-3 h-3 
-                            dark:bg-(--white) bg-(--black)
-                            dark:group-hover:bg-(--black) group-hover:bg-(--white)">
+            <!--Proj-2--> 
+            <div class="flex flex-col relative gap-6 border-2 border-gray-700 px-2 py-2 group cursor-crosshair 
+                        dark:hover:bg-(--black) hover:bg-(--white)
+                        lg:w-105 lg:h-85 lg:gap-2">
+              <img class="absolute -top-55 left-0 hidden group-hover:flex" src="./src/assets/projects/Game.jpg" alt="photo">
+              <div class="flex flex-col gap-2">
+                <div class=" flex flex-row w-fit items-center gap-2 px-2 py-1 border-2 border-gray-800
+                            dark:bg-(--black) bg-(--white) dark:text-(--white) text-(--black)
+                            dark:group-hover:bg-(--white) group-hover:bg-(--black)
+                            dark:group-hover:text-(--black) group-hover:text-(--white)">
+                  <div class="w-3 h-3 
+                              dark:bg-(--white) bg-(--black)
+                              dark:group-hover:bg-(--black) group-hover:bg-(--white)">
+                  </div>
+                  <p class="text-base font-semibold\
+                            lg:text-sm">Learning Javascript</p>
                 </div>
-                <p class="text-base font-semibold">School Project</p>
+                <div class="flex flex-col gap-2">
+                  <p class="text-2xl text-center font-bold
+                            dark:group-hover:text-(--white) group-hover:text-black
+                              lg:text-xl">Javascript Game</p>
+                  <p class="text-base font-semibold text-justify px-1
+                            dark:group-hover:text-white group-hover:text-black">A Javascript web hosted game. Inspired by the traditional game we grew up playing.
+                  </p>
+                </div>
               </div>
-              <p class="text-base font-medium text-justify px-1">Inspired by the game Mobile Legends: Bang Bang. A website guide for new players to learn about the different strategies in the game.</p> 
+                
+              <div class="flex flex-col">
+                <p class="text-lg font-bold
+                          dark:group-hover:text-white group-hover:text-black">Tech Stack:</p>
+                <div class="flex flex-row flex-wrap gap-2 items-center justify-center">
+                  <div class="flex flex-row items-center gap-1 text-sm font-bold px-2 py-1.5 border-2 border-gray-800
+                            dark:bg-(--black) bg-(--white) dark:text-(--white) text-(--black) transition-all duration-300
+                            dark:hover:bg-(--black) hover:bg-(--white) dark:hover:text-(--white) hover:text-(--black)
+                            dark:group-hover:text-(--black) group-hover:text-(--white) dark:group-hover:bg-(--white) group-hover:bg-(--black)
+                            lg:text-xs"><i class="devicon-html5-plain"></i> | HTML
+                  </div>
+                  <div class="flex flex-row items-center gap-1 text-sm font-bold px-2 py-1.5 border-2 border-gray-800
+                            dark:bg-(--black) bg-(--white) dark:text-(--white) text-(--black) transition-all duration-300
+                            dark:hover:bg-(--black) hover:bg-(--white) dark:hover:text-(--white) hover:text-(--black)
+                            dark:group-hover:text-(--black) group-hover:text-(--white) dark:group-hover:bg-(--white) group-hover:bg-(--black)
+                            lg:text-xs"><i class="devicon-css3-plain"></i> | CSS
+                  </div>
+                  <div class="flex flex-row items-center gap-1 text-sm font-bold px-2 py-1.5 border-2 border-gray-800
+                            dark:bg-(--black) bg-(--white) dark:text-(--white) text-(--black) transition-all duration-300
+                            dark:hover:bg-(--black) hover:bg-(--white) dark:hover:text-(--white) hover:text-(--black)
+                            dark:group-hover:text-(--black) group-hover:text-(--white) dark:group-hover:bg-(--white) group-hover:bg-(--black)
+                            lg:text-xs"><i class="devicon-javascript-plain"></i> | Javascript
+                  </div>
+                  <div class="flex flex-row items-center gap-1 text-sm font-bold px-2 py-1.5 border-2 border-gray-800
+                            dark:bg-(--black) bg-(--white) dark:text-(--white) text-(--black) transition-all duration-300
+                            dark:hover:bg-(--black) hover:bg-(--white) dark:hover:text-(--white) hover:text-(--black)
+                            dark:group-hover:text-(--black) group-hover:text-(--white) dark:group-hover:bg-(--white) group-hover:bg-(--black)
+                            lg:text-xs"><i class="devicon-git-plain"></i> | Git
+                  </div>
+                  <div class="flex flex-row items-center gap-1 text-sm font-bold px-2 py-1.5 border-2 border-gray-800
+                            dark:bg-(--black) bg-(--white) dark:text-(--white) text-(--black) transition-all duration-300
+                            dark:hover:bg-(--black) hover:bg-(--white) dark:hover:text-(--white) hover:text-(--black)
+                            dark:group-hover:text-(--black) group-hover:text-(--white) dark:group-hover:bg-(--white) group-hover:bg-(--black)
+                            lg:text-xs"><i class="devicon-github-original"></i> | GitHub
+                  </div>
+                </div>
+                
+              </div>
+                <div class="flex flex-row gap-2 items-center my-auto">
+                  <a class="text-sm font-bold px-2 py-1.5 border-2 border-gray-800
+                            dark:bg-(--black) bg-(--white) dark:text-(--white) text-(--black) transition-all duration-300
+                            dark:hover:bg-(--white) hover:bg-(--black) dark:hover:text-(--black) hover:text-(--white)
+                            lg:text-xs" target="_blank" href="https://github.com/zume13/Rock-Paper-Scissors-Game-" target="_blank">Code Base &rarr;</a>
+                  |
+                  <a class="text-sm font-bold px-2 py-1.5 border-2 border-gray-800
+                            dark:bg-(--white) bg-(--black) dark:text-(--black) text-(--white) transition-all duration-300
+                            dark:hover:bg-(--black) hover:bg-(--white) dark:hover:text-(--white) hover:text-(--black)
+                            lg:text-xs" target="_blank" href="https://zume13.github.io/Rock-Paper-Scissors-Game-/">Live Demo &rarr;</a>
+                </div>
             </div>
-              
-            <div class="flex flex-col">
-              <p class="text-lg font-bold">Tech Stack:</p>
-              <div class="flex flex-row flex-wrap gap-2 items-center justify-center
-                          transition-all duration-300">
-                <div class="flex flex-row items-center gap-1 text-sm font-bold px-2 py-1.5 border-2 border-gray-800
-                          dark:bg-(--black) bg-(--white) dark:text-(--white) text-(--black)
-                          dark:hover:bg-(--white) hover:bg-(--black) dark:hover:text-(--black) hover:text-(--white)"><i class="devicon-html5-plain"></i> | HTML
+
+            <!--Proj-3--> 
+            <div class="flex flex-col relative gap-6 border-2 border-gray-700 px-2 py-2 group cursor-crosshair
+                        dark:hover:bg-(--black) hover:bg-(--white)
+                        lg:w-105 lg:h-85 lg:gap-2">
+              <img class="absolute -top-55 left-0 hidden group-hover:flex" src="./src/assets/projects/Map.jpg" alt="photo">
+              <div class="flex flex-col gap-2">
+                <div class=" flex flex-row w-fit items-center gap-2 px-2 py-1 border-2 border-gray-800
+                            dark:bg-(--black) bg-(--white) dark:text-(--white) text-(--black)
+                            dark:group-hover:bg-(--white) group-hover:bg-(--black)
+                            dark:group-hover:text-(--black) group-hover:text-(--white)">
+                  <div class="w-3 h-3 
+                              dark:bg-(--white) bg-(--black)
+                              dark:group-hover:bg-(--black) group-hover:bg-(--white)">
+                  </div>
+                  <p class="text-base font-semibold
+                            lg:text-sm">School Project</p>
                 </div>
-                <div class="flex flex-row items-center gap-1 text-sm font-bold px-2 py-1.5 border-2 border-gray-800
-                          dark:bg-(--black) bg-(--white) dark:text-(--white) text-(--black)
-                          dark:hover:bg-(--white) hover:bg-(--black) dark:hover:text-(--black) hover:text-(--white)"><i class="devicon-css3-plain"></i> | CSS
-                </div>
-                <div class="flex flex-row items-center gap-1 text-sm font-bold px-2 py-1.5 border-2 border-gray-800
-                          dark:bg-(--black) bg-(--white) dark:text-(--white) text-(--black)
-                          dark:hover:bg-(--white) hover:bg-(--black) dark:hover:text-(--black) hover:text-(--white)"><i class="devicon-javascript-plain"></i> | Javascript
-                </div>
-                <div class="flex flex-row items-center gap-1 text-sm font-bold px-2 py-1.5 border-2 border-gray-800
-                          dark:bg-(--black) bg-(--white) dark:text-(--white) text-(--black)
-                          dark:hover:bg-(--white) hover:bg-(--black) dark:hover:text-(--black) hover:text-(--white)"><i class="devicon-git-plain"></i> | Git
-                </div>
-                <div class="flex flex-row items-center gap-1 text-sm font-bold px-2 py-1.5 border-2 border-gray-800
-                          dark:bg-(--black) bg-(--white) dark:text-(--white) text-(--black)
-                          dark:hover:bg-(--white) hover:bg-(--black) dark:hover:text-(--black) hover:text-(--white)"><i class="devicon-github-original"></i> | GitHub
+                <div class="flex flex-col gap-2">
+                  <p class="text-2xl text-center font-bold
+                            dark:group-hover:text-white group-hover:text-black
+                              lg:text-xl">Pampanga State University Map</p>
+                  <p class="text-base font-semibold text-justify px-1
+                            dark:group-hover:text-white group-hover:text-black">A University Map that uses Leaflet API for the map and navigation. This map guides the students on locating their destination throughout the whole Pampanga State University
+                  </p>
                 </div>
               </div>
-               
+                
+              <div class="flex flex-col">
+                <p class="text-lg font-bold
+                          dark:group-hover:text-white group-hover:text-black">Tech Stack:</p>
+                <div class="flex flex-row flex-wrap gap-2 items-center justify-center">
+                  <div class="flex flex-row items-center gap-1 text-sm font-bold px-2 py-1.5 border-2 border-gray-800
+                            dark:bg-(--black) bg-(--white) dark:text-(--white) text-(--black) transition-all duration-300
+                            dark:hover:bg-(--black) hover:bg-(--white) dark:hover:text-(--white) hover:text-(--black)
+                            dark:group-hover:text-(--black) group-hover:text-(--white) dark:group-hover:bg-(--white) group-hover:bg-(--black)
+                            lg:text-xs"><i class="devicon-html5-plain"></i> | HTML
+                  </div>
+                  <div class="flex flex-row items-center gap-1 text-sm font-bold px-2 py-1.5 border-2 border-gray-800
+                            dark:bg-(--black) bg-(--white) dark:text-(--white) text-(--black) transition-all duration-300
+                            dark:hover:bg-(--black) hover:bg-(--white) dark:hover:text-(--white) hover:text-(--black)
+                            dark:group-hover:text-(--black) group-hover:text-(--white) dark:group-hover:bg-(--white) group-hover:bg-(--black)
+                            lg:text-xs"><i class="devicon-css3-plain"></i> | CSS
+                  </div>
+                  <div class="flex flex-row items-center gap-1 text-sm font-bold px-2 py-1.5 border-2 border-gray-800
+                            dark:bg-(--black) bg-(--white) dark:text-(--white) text-(--black) transition-all duration-300 
+                            dark:hover:bg-(--black) hover:bg-(--white) dark:hover:text-(--white) hover:text-(--black)
+                            dark:group-hover:text-(--black) group-hover:text-(--white) dark:group-hover:bg-(--white) group-hover:bg-(--black)
+                            lg:text-xs"><i class="devicon-javascript-plain"></i> | Javascript
+                  </div>
+                  <div class="flex flex-row items-center gap-1 text-sm font-bold px-2 py-1.5 border-2 border-gray-800
+                            dark:bg-(--black) bg-(--white) dark:text-(--white) text-(--black) transition-all duration-300
+                            dark:hover:bg-(--black) hover:bg-(--white) dark:hover:text-(--white) hover:text-(--black)
+                            dark:group-hover:text-(--black) group-hover:text-(--white) dark:group-hover:bg-(--white) group-hover:bg-(--black)
+                            lg:text-xs"><i class="devicon-git-plain"></i> | Git
+                  </div>
+                  <div class="flex flex-row items-center gap-1 text-sm font-bold px-2 py-1.5 border-2 border-gray-800
+                            dark:bg-(--black) bg-(--white) dark:text-(--white) text-(--black) transition-all duration-300
+                            dark:hover:bg-(--black) hover:bg-(--white) dark:hover:text-(--white) hover:text-(--black)
+                            dark:group-hover:text-(--black) group-hover:text-(--white) dark:group-hover:bg-(--white) group-hover:bg-(--black)
+                            lg:text-xs"><i class="devicon-github-original"></i> | GitHub
+                  </div>
+                </div>
+                
+              </div>
+                <div class="flex flex-row gap-2 items-center my-auto">
+                  <a class="text-sm font-bold px-2 py-1.5 border-2 border-gray-800
+                            dark:bg-(--black) bg-(--white) dark:text-(--white) text-(--black) transition-all duration-300
+                            dark:hover:bg-(--white) hover:bg-(--black) dark:hover:text-(--black) hover:text-(--white)
+                            lg:text-xs" target="_blank" href="https://github.com/zume13/dhvsu_map" target="_blank">Code Base &rarr;</a>
+                  |
+                  <a class="text-sm font-bold px-2 py-1.5 border-2 border-gray-800
+                            dark:bg-(--white) bg-(--black) dark:text-(--black) text-(--white) transition-all duration-300
+                            dark:hover:bg-(--black) hover:bg-(--white) dark:hover:text-(--white) hover:text-(--black)
+                            lg:text-xs" target="_blank" href="https://zume13.github.io/dhvsu_map/">Live Demo &rarr;</a>
+                </div>
             </div>
-              <div class="flex flex-row gap-2 items-center">
-                <a class="text-sm font-bold px-2 py-1.5 border-2 border-gray-800
-                          dark:bg-(--black) bg-(--white) dark:text-(--white) text-(--black)
-                          dark:hover:bg-(--white) hover:bg-(--black) dark:hover:text-(--black) hover:text-(--white)" target="_blank" href="" target=>Code Base &rarr;</a>
-                |
-                <a class="text-sm font-bold px-2 py-1.5 border-2 border-gray-800
-                          dark:bg-(--white) bg-(--black) dark:text-(--black) text-(--white)
-                          dark:hover:bg-(--black) hover:bg-(--white) dark:hover:text-(--white) hover:text-(--black)" target="_blank" href="">Live Demo &rarr;</a>
-              </div>
           </div>
+          
 
         </div>
        </div>
-       <aside>
-
-       </aside>
-    </section>
-
-    <!--About-->  
-    <section id="about" class="flex flex-col scroll-mt-[15dvh] items-center justify-center w-full h-full dark:bg-(--black) bg-(--white) mt-[15dvh]  dark:text-(--white) text-(--black) font-space
-                              sm:flex-col
-                              md:flex-row">
-      <div class="flex flex-col max-w-[85%] md:max-w-[90%] ">
-        <div class="flex flex-col gap-4 items-center justify-center">
+       <aside class="flex flex-col w-full border-2 border-gray-800 dark:bg-(--white) bg-black px-3 py-3 gap-3
+                      lg:w-[30%]">
           <p class="text-3xl font-bold 
-                    md:text-4xl
-                    lg:text-6xl">ABOUT ME</p>
-          <p class="text-xl text-center font-bold pb-5
-                    md:text-2xl
-                    lg:text-4xl">Passionate about building technology that matters.</p>
-          <p class="text-lg text-center font-semibold pb-10
-                    md:text-lg 
-                    lg:text-3xl">I'm a full-stack engineer with a passion for clean architecture and scalable systems. <br> Over the years, I've built everything from high-performance APIs to responsive user interfaces. <br> My philosophy centers on writing code that's not just functional, but maintainable, secure, and efficient.</p>
-        </div>
-        <div class="flex flex-col sm:flex-row items-center justify-center 
-                    sm:gap-5
-                    lg:gap-20">
-          <div class="flex flex-col justify-center gap-3 mb-10 md:mb-0">
-            <p class="text-3xl font-bold pb-5 text-center
-                      md:text-4xl
-                      lg:text-6xl">Quick Facts</p>
-            <div class="flex flex-col gap-2 rounded-2xl p-3 items-start h-[30%]
-                        dark:bg-(--white) dark:text-(--black) text-(--white) bg-(--black)
-                        lg:p-5">
-              <p class="text-lg font-extrabold
-                        md:text-xl
-                        lg:text-3xl">⚙️ Core Philosophy</p>
-              <p class="text-base font-semibold
-                        md:text-lg
-                        lg:text-2xl">Clean Architecture & SOLID principles</p>
-            </div>
-            <div class="flex flex-col gap-2 rounded-2xl p-3 items-start
-                        dark:bg-(--white) dark:text-(--black) text-(--white) bg-(--black)
-                        lg:p-5">
-              <p class="text-lg font-extrabold
-                        md:text-xl
-                        lg:text-3xl">⚡Current Focus</p>
-              <p class="text-base font-semibold
-                        md:text-lg
-                        lg:text-2xl">Modern reactive state management & API optimization</p>
-            </div>
-            <div class="flex flex-col gap-2 rounded-2xl p-3 items-start
-                        dark:bg-(--white) dark:text-(--black) text-(--white) bg-(--black)
-                        lg:p-5">
-              <p class="text-lg font-extrabold
-                        md:text-xl
-                        lg:text-3xl">🔒 Side Quests</p>
-              <p class="text-base font-semibold
-                        md:text-lg
-                        lg:text-2xl"> Exploring defensive security & cloud hardening</p>
+                    dark:text-(--black) text-(--white)">CURRENT TECH STACK</p>
+          <div class="flex flex-col gap-2 border-2 border-gray-700 px-3 py-3">
+            <p class="text-2xl font-bold
+                      dark:text-(--black) text-(--white)">Back-End</p>
+            <div class="flex flex-row flex-wrap items-center justify-center gap-3 text-xl font-semibold">
+              <div class="flex flex-row px-2 py-1 border-2 border-gray-800 items-center gap-2
+                          dark:bg-(--black) bg-(--white) dark:text-(--white) text-(--black)
+                          dark:hover:bg-(--white) hover:bg-(--black) dark:hover:text-(--black) hover:text-(--white)">
+                <i class="devicon-dotnetcore-plain"></i>.NET Core
+              </div>
+              <div class="flex flex-row px-2 py-1 border-2 border-gray-800 items-center gap-2
+                          dark:bg-(--black) bg-(--white) dark:text-(--white) text-(--black)
+                          dark:hover:bg-(--white) hover:bg-(--black) dark:hover:text-(--black) hover:text-(--white)">
+                <i class="devicon-csharp-plain"></i> C#
+              </div>
+              <div class="flex flex-row px-2 py-1 border-2 border-gray-800 items-center gap-2
+                          dark:bg-(--black) bg-(--white) dark:text-(--white) text-(--black)
+                          dark:hover:bg-(--white) hover:bg-(--black) dark:hover:text-(--black) hover:text-(--white)">
+                <i class="devicon-azuresqldatabase-plain"></i>  SQL Server
+              </div>
+              <div class="flex flex-row px-2 py-1 border-2 border-gray-800 items-center gap-2
+                          dark:bg-(--black) bg-(--white) dark:text-(--white) text-(--black)
+                          dark:hover:bg-(--white) hover:bg-(--black) dark:hover:text-(--black) hover:text-(--white)">
+                  EF CORE
+              </div>
+              <div class="flex flex-row px-2 py-1 border-2 border-gray-800 items-center gap-2
+                          dark:bg-(--black) bg-(--white) dark:text-(--white) text-(--black)
+                          dark:hover:bg-(--white) hover:bg-(--black) dark:hover:text-(--black) hover:text-(--white)">
+                  Dapper
+              </div>
+              <div class="flex flex-row px-2 py-1 border-2 border-gray-800 items-center gap-2
+                          dark:bg-(--black) bg-(--white) dark:text-(--white) text-(--black)
+                          dark:hover:bg-(--white) hover:bg-(--black) dark:hover:text-(--black) hover:text-(--white)">
+                  JWT
+              </div>
             </div>
           </div>
-
-            <div class=" flex flex-col gap-3 mb-10 md:mb-0">
-              <p class="text-3xl font-bold pb-5 text-center
-                        md:text-4xl
-                        lg:text-6xl">Tech Stack</p>
-              <div  class="flex flex-col gap-2 rounded-2xl p-3 items-start
-                            dark:bg-(--white) dark:text-(--black) text-(--white) bg-(--black)
-                            lg:p-5">
-                <p class="text-lg font-extrabold
-                          md:text-xl
-                          lg:text-3xl">Back-End</p>
-                <p class="text-base font-semibold
-                          md:text-lg
-                          lg:text-2xl">
-                  <i class="devicon-dotnetcore-plain"></i>.NET Core |
-                  <i class="devicon-csharp-plain"></i> C# |
-                  <i class="devicon-azuresqldatabase-plain"></i>  SQL Server 
-                </p>
+          <div class="flex flex-col gap-2 border-2 border-gray-700 px-3 py-3">
+            <p class="text-2xl font-bold
+                      dark:text-(--black) text-(--white)">Front-End</p>
+            <div class="flex flex-row flex-wrap items-center justify-center gap-3 text-xl font-semibold">
+              <div class="flex flex-row px-2 py-1 border-2 border-gray-800 items-center gap-2
+                          dark:bg-(--black) bg-(--white) dark:text-(--white) text-(--black)
+                          dark:hover:bg-(--white) hover:bg-(--black) dark:hover:text-(--black) hover:text-(--white)">
+                <i class="devicon-angularjs-plain"></i> Angular
               </div>
-              <div class="flex flex-col gap-2 rounded-2xl p-3 items-start
-                            dark:bg-(--white) dark:text-(--black) text-(--white) bg-(--black)
-                            lg:p-5">
-                <p class="text-lg font-extrabold
-                          md:text-xl
-                          lg:text-3xl">Front-End</p>
-                <p class="text-base font-semibold
-                          md:text-lg
-                          lg:text-2xl">
-                  <i class="devicon-typescript-plain"></i> TypeScript |
-                  <i class="devicon-react-original"></i> React |
-                  <i class="devicon-angularjs-plain"></i> Angular |
-                  <i class="devicon-tailwindcss-original"></i> Tailwind CSS</p>
+              <div class="flex flex-row px-2 py-1 border-2 border-gray-800 items-center gap-2
+                          dark:bg-(--black) bg-(--white) dark:text-(--white) text-(--black)
+                          dark:hover:bg-(--white) hover:bg-(--black) dark:hover:text-(--black) hover:text-(--white)">
+                <i class="devicon-react-original"></i> React
               </div>
-              <div class="flex flex-col gap-2 rounded-2xl p-3 items-start
-                            dark:bg-(--white) dark:text-(--black) text-(--white) bg-(--black)
-                            lg:p-5">
-                <p class="text-lg font-extrabold
-                          md:text-xl
-                          lg:text-3xl ">DevOps & Tools</p>
-                <p class="text-base font-semibold
-                          md:text-lg
-                          lg:text-2xl">
-                  <i class="devicon-docker-plain"></i> Docker |
-                  <i class="devicon-kubernetes-plain"></i> Kubernetes |
-                  <i class="devicon-linux-plain"></i> Linux |
-                  <i class="devicon-git-plain"></i> Git</p>
+              <div class="flex flex-row px-2 py-1 border-2 border-gray-800 items-center gap-2
+                          dark:bg-(--black) bg-(--white) dark:text-(--white) text-(--black)
+                          dark:hover:bg-(--white) hover:bg-(--black) dark:hover:text-(--black) hover:text-(--white)">
+                <i class="devicon-typescript-plain"></i> Typescript
+              </div>
+              <div class="flex flex-row px-2 py-1 border-2 border-gray-800 items-center gap-2
+                          dark:bg-(--black) bg-(--white) dark:text-(--white) text-(--black)
+                          dark:hover:bg-(--white) hover:bg-(--black) dark:hover:text-(--black) hover:text-(--white)">
+                <i class="devicon-javascript-plain"></i> Javascript
+              </div>
+              <div class="flex flex-row px-2 py-1 border-2 border-gray-800 items-center gap-2
+                          dark:bg-(--black) bg-(--white) dark:text-(--white) text-(--black)
+                          dark:hover:bg-(--white) hover:bg-(--black) dark:hover:text-(--black) hover:text-(--white)">
+                <i class="devicon-tailwindcss-original"></i> Tailwind CSS
               </div>
             </div>
-
           </div>
-        </div>
-    </section>
-
-    <!--Projects-->  
-    <section id="proj" class="flex flex-col scroll-mt-[15dvh] gap-4 items-center justify-center w-full h-full dark:bg-(--black) bg-(--white) mt-[15dvh]  dark:text-(--white) text-(--black) font-space">
-      <div class="flex gap-2 flex-col text-start w-[90%]">
-        <p class="text-3xl font-bold 
-                    md:text-4xl
-                    lg:text-6xl">Featured Projects</p>
-        <p class="text-lg font-bold pb-5
-                    md:text-xl
-                    lg:text-3xl">Crafting solutions that scale and perform.</p>
-      </div>
-      <div id="projContainer" class="flex flex-col flex-wrap gap-8 w-full items-center justify-center
-                                    md:flex-row
-                                    lg:flex-row">
-      </div>
+          <div class="flex flex-col gap-2 border-2 border-gray-700 px-3 py-3">
+            <p class="text-2xl font-bold
+                      dark:text-(--black) text-(--white)">DevOps & Tools</p>
+            <div class="flex flex-row flex-wrap items-center justify-center gap-3 text-xl font-semibold">
+              <div class="flex flex-row px-2 py-1 border-2 border-gray-800 items-center gap-2
+                          dark:bg-(--black) bg-(--white) dark:text-(--white) text-(--black)
+                          dark:hover:bg-(--white) hover:bg-(--black) dark:hover:text-(--black) hover:text-(--white)">
+                <i class="devicon-docker-plain"></i> Docker
+              </div>
+              <div class="flex flex-row px-2 py-1 border-2 border-gray-800 items-center gap-2
+                          dark:bg-(--black) bg-(--white) dark:text-(--white) text-(--black)
+                          dark:hover:bg-(--white) hover:bg-(--black) dark:hover:text-(--black) hover:text-(--white)">
+                <i class="devicon-kubernetes-plain"></i> Kubernetes
+              </div>
+              <div class="flex flex-row px-2 py-1 border-2 border-gray-800 items-center gap-2
+                          dark:bg-(--black) bg-(--white) dark:text-(--white) text-(--black)
+                          dark:hover:bg-(--white) hover:bg-(--black) dark:hover:text-(--black) hover:text-(--white)">
+                <i class="devicon-linux-plain"></i> Linux
+              </div>
+              <div class="flex flex-row px-2 py-1 border-2 border-gray-800 items-center gap-2
+                          dark:bg-(--black) bg-(--white) dark:text-(--white) text-(--black)
+                          dark:hover:bg-(--white) hover:bg-(--black) dark:hover:text-(--black) hover:text-(--white)">
+                <i class="devicon-git-plain"></i> Git
+              </div>
+              <div class="flex flex-row px-2 py-1 border-2 border-gray-800 items-center gap-2
+                          dark:bg-(--black) bg-(--white) dark:text-(--white) text-(--black)
+                          dark:hover:bg-(--white) hover:bg-(--black) dark:hover:text-(--black) hover:text-(--white)">
+                Swagger
+              </div>
+              <div class="flex flex-row px-2 py-1 border-2 border-gray-800 items-center gap-2
+                          dark:bg-(--black) bg-(--white) dark:text-(--white) text-(--black)
+                          dark:hover:bg-(--white) hover:bg-(--black) dark:hover:text-(--black) hover:text-(--white)">
+                Scalar
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col gap-2 border-2 border-gray-700 px-3 py-3">
+            <p class="text-2xl font-bold
+                      dark:text-(--black) text-(--white)">Architecture | Principles | Patterns</p>
+            <div class="flex flex-row flex-wrap items-center justify-center gap-3 text-xl font-semibold">
+              <div class="flex flex-row px-2 py-1 border-2 border-gray-800 items-center gap-2
+                          dark:bg-(--black) bg-(--white) dark:text-(--white) text-(--black)
+                          dark:hover:bg-(--white) hover:bg-(--black) dark:hover:text-(--black) hover:text-(--white)">
+                Clean Architecture
+              </div>
+              <div class="flex flex-row px-2 py-1 border-2 border-gray-800 items-center gap-2
+                          dark:bg-(--black) bg-(--white) dark:text-(--white) text-(--black)
+                          dark:hover:bg-(--white) hover:bg-(--black) dark:hover:text-(--black) hover:text-(--white)">
+                CQRS
+              </div>
+              <div class="flex flex-row px-2 py-1 border-2 border-gray-800 items-center gap-2
+                          dark:bg-(--black) bg-(--white) dark:text-(--white) text-(--black)
+                          dark:hover:bg-(--white) hover:bg-(--black) dark:hover:text-(--black) hover:text-(--white)">
+                SOLID
+              </div>
+              <div class="flex flex-row px-2 py-1 border-2 border-gray-800 items-center gap-2
+                          dark:bg-(--black) bg-(--white) dark:text-(--white) text-(--black)
+                          dark:hover:bg-(--white) hover:bg-(--black) dark:hover:text-(--black) hover:text-(--white)">
+                OOP
+              </div>
+              <div class="flex flex-row px-2 py-1 border-2 border-gray-800 items-center gap-2
+                          dark:bg-(--black) bg-(--white) dark:text-(--white) text-(--black)
+                          dark:hover:bg-(--white) hover:bg-(--black) dark:hover:text-(--black) hover:text-(--white)">
+                Unit of Work
+              </div>
+              <div class="flex flex-row px-2 py-1 border-2 border-gray-800 items-center gap-2
+                          dark:bg-(--black) bg-(--white) dark:text-(--white) text-(--black)
+                          dark:hover:bg-(--white) hover:bg-(--black) dark:hover:text-(--black) hover:text-(--white)">
+                Rich Domain Design
+              </div>
+              <div class="flex flex-row px-2 py-1 border-2 border-gray-800 items-center gap-2
+                          dark:bg-(--black) bg-(--white) dark:text-(--white) text-(--black)
+                          dark:hover:bg-(--white) hover:bg-(--black) dark:hover:text-(--black) hover:text-(--white)">
+                Aggregates Design
+              </div>
+              <div class="flex flex-row px-2 py-1 border-2 border-gray-800 items-center gap-2
+                          dark:bg-(--black) bg-(--white) dark:text-(--white) text-(--black)
+                          dark:hover:bg-(--white) hover:bg-(--black) dark:hover:text-(--black) hover:text-(--white)">
+                Factory
+              </div>
+              <div class="flex flex-row px-2 py-1 border-2 border-gray-800 items-center gap-2
+                          dark:bg-(--black) bg-(--white) dark:text-(--white) text-(--black)
+                          dark:hover:bg-(--white) hover:bg-(--black) dark:hover:text-(--black) hover:text-(--white)">
+                Domain Driven Design
+              </div>
+              <div class="flex flex-row px-2 py-1 border-2 border-gray-800 items-center gap-2
+                          dark:bg-(--black) bg-(--white) dark:text-(--white) text-(--black)
+                          dark:hover:bg-(--white) hover:bg-(--black) dark:hover:text-(--black) hover:text-(--white)">
+                Event Driven Design
+              </div>
+              <div class="flex flex-row px-2 py-1 border-2 border-gray-800 items-center gap-2
+                          dark:bg-(--black) bg-(--white) dark:text-(--white) text-(--black)
+                          dark:hover:bg-(--white) hover:bg-(--black) dark:hover:text-(--black) hover:text-(--white)">
+                Outbox
+              </div>
+              <div class="flex flex-row px-2 py-1 border-2 border-gray-800 items-center gap-2
+                          dark:bg-(--black) bg-(--white) dark:text-(--white) text-(--black)
+                          dark:hover:bg-(--white) hover:bg-(--black) dark:hover:text-(--black) hover:text-(--white)">
+                Idempotency
+              </div>
+              <div class="flex flex-row px-2 py-1 border-2 border-gray-800 items-center gap-2
+                          dark:bg-(--black) bg-(--white) dark:text-(--white) text-(--black)
+                          dark:hover:bg-(--white) hover:bg-(--black) dark:hover:text-(--black) hover:text-(--white)">
+                Caching
+              </div>
+              <div class="flex flex-row px-2 py-1 border-2 border-gray-800 items-center gap-2
+                          dark:bg-(--black) bg-(--white) dark:text-(--white) text-(--black)
+                          dark:hover:bg-(--white) hover:bg-(--black) dark:hover:text-(--black) hover:text-(--white)">
+                Indexing
+              </div>
+              <div class="flex flex-row px-2 py-1 border-2 border-gray-800 items-center gap-2
+                          dark:bg-(--black) bg-(--white) dark:text-(--white) text-(--black)
+                          dark:hover:bg-(--white) hover:bg-(--black) dark:hover:text-(--black) hover:text-(--white)">
+                Error Handling
+              </div>
+              <div class="flex flex-row px-2 py-1 border-2 border-gray-800 items-center gap-2
+                          dark:bg-(--black) bg-(--white) dark:text-(--white) text-(--black)
+                          dark:hover:bg-(--white) hover:bg-(--black) dark:hover:text-(--black) hover:text-(--white)">
+                Rate Limiting
+              </div>
+              <div class="flex flex-row px-2 py-1 border-2 border-gray-800 items-center gap-2
+                          dark:bg-(--black) bg-(--white) dark:text-(--white) text-(--black)
+                          dark:hover:bg-(--white) hover:bg-(--black) dark:hover:text-(--black) hover:text-(--white)">
+                REST API's
+              </div>
+              <div class="flex flex-row px-2 py-1 border-2 border-gray-800 items-center gap-2
+                          dark:bg-(--black) bg-(--white) dark:text-(--white) text-(--black)
+                          dark:hover:bg-(--white) hover:bg-(--black) dark:hover:text-(--black) hover:text-(--white)">
+                Middlewares
+              </div>
+              <div class="flex flex-row px-2 py-1 border-2 border-gray-800 items-center gap-2
+                          dark:bg-(--black) bg-(--white) dark:text-(--white) text-(--black)
+                          dark:hover:bg-(--white) hover:bg-(--black) dark:hover:text-(--black) hover:text-(--white)">
+                Value Objects
+              </div>
+            </div>
+          </div>
+       </aside>
     </section>
 
     <!--Contact-->  
@@ -525,7 +795,7 @@
                         class="w-full mx-auto lg:text-lg border-2 dark:border-(--white) border-(--black) px-4 py-2"></textarea>
             </div>
 
-            <button type="submit" class="w-full border-2 cursor-pointer border-(--black) px-4 py-2  font-extrabold mx-auto
+            <button id="submitBtn" type="submit" class="w-full border-2 cursor-pointer border-(--black) px-4 py-2  font-extrabold mx-auto
                                         duration-300 transition-all
                                         dark:bg-(--white) dark:text-(--black) dark:hover:bg-(--black) bg-(--black) text-(--white) hover:bg-(--white) 
                                         dark:hover:text-(--white) dark:hover:border-(--white)  hover:text-(--black)

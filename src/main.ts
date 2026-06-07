@@ -1,4 +1,4 @@
-import { themeClickListeners, loadSavedTheme, scrollToViewListener, closeSideBars, renderProjectCards, sendEmail } from "./utils";
+import { themeClickListeners, loadSavedTheme, scrollToViewListener, closeSideBars, sendEmail } from "./utils";
 
 const themeButton = document.getElementById('themeButton') as HTMLButtonElement;
 const themeImage = document.getElementById('themeImage') as HTMLImageElement;
@@ -22,18 +22,54 @@ const aboutMobile = document.getElementById('aboutMobile') as HTMLAnchorElement;
 const projMobile = document.getElementById('projMobile') as HTMLAnchorElement;
 const contactMobile = document.getElementById('contactMobile') as HTMLAnchorElement;
 const heroMobile = document.getElementById('heroMobile') as HTMLAnchorElement;
-const container = document.getElementById('projContainer');
 const form = document.getElementById('contact-form') as HTMLFormElement;
+const successT = document.getElementById('success-toast') as HTMLElement;
+const errorT = document.getElementById('error-toast') as HTMLElement;
+const submitBtn = document.getElementById('submitBtn') as HTMLButtonElement;
 
-form?.addEventListener('submit', (e) =>{
+const cd = 120 * 1000;
+
+form?.addEventListener('submit', async (e) =>{
     e.preventDefault();
+ 
+    const lastSubmit = localStorage.getItem('lastSubmit');
+    if(lastSubmit){
+      const elapsed = Date.now() - Number(lastSubmit);
+
+      if(elapsed < cd){
+        alert("You just sent an Email. Try again after a few minutes.")
+        return;
+      }
+    }
 
     const formData = new FormData(form);
+    const success =  await sendEmail(formData, successT, errorT);
 
-    sendEmail(formData);
+    if(success){
+      form.reset();
+    }
 });
 
-renderProjectCards(container!);
+function updateBtn(){
+
+  const lastSubmit = localStorage.getItem('lastSubmit');
+
+    if (!lastSubmit) {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Send Message';
+        return;
+    }
+
+    const remaining = cd - (Date.now() - Number(lastSubmit));
+
+    if(remaining > 0 ){
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Wait';
+    }else{
+      submitBtn.disabled = false;
+        submitBtn.textContent = 'Send Message';
+    }
+}
 
 export function openSidebar() {
   sidebar?.classList.remove("right-[-100%]");
@@ -69,3 +105,5 @@ themeClickListeners([
                         {button: themeButtonMobile, image: themeImageMobile}
                     ]);
 loadSavedTheme();
+setInterval(updateBtn, 1000);
+updateBtn();

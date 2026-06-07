@@ -119,25 +119,51 @@ export function renderProjectCards(target : HTMLElement){
     ).join("")
 }
 
-export function sendEmail(formData : FormData){
+export async function sendEmail (formData : FormData, successT : HTMLElement, errorT : HTMLElement): Promise<boolean>{
 
     const name = formData.get('name');
     const email = formData.get('email');;
     const message = formData.get('message');
 
-    if(!name || !email || !message){
-        throw new Error('Missing Fields');
+    try{
+         if(!name || !email || !message){
+            throw new Error('Missing Fields');
+            }
+        await emailjs.send
+            (service, template, 
+                {
+                    name: name.toString(),
+                    email: email.toString(),
+                    message: message.toString()
+                }, 
+            key);
+
+            localStorage.setItem('lastSubmit', Date.now().toString())
+            showToast(successT, errorT);
+            return true;
+    }catch(error)
+    {
+        console.error(error);
+        showToast(successT, errorT, false);
+        return false;
     }
 
-    console.log(name, email, message);
-
-    emailjs.send(service, template, 
-        {
-            name: name.toString(),
-            email: email.toString(),
-            message: message.toString()
-        }, 
-        key);
 }
 
+function showToast(success : HTMLElement, error : HTMLElement, isSuccess = true){
+
+    if(isSuccess){
+        success.classList.remove('hidden');
+        success.classList.add('flex'); 
+    }else{
+        error.classList.remove('hidden');
+        error.classList.add('flex');
+    }
+    setTimeout(() => {
+        success.classList.remove('flex');
+        success.classList.add('hidden'); 
+        error.classList.remove('flex');
+        error.classList.add('hidden');
+    }, 5000);
+}
 
