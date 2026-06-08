@@ -29,37 +29,48 @@ const submitBtn = document.getElementById('submitBtn') as HTMLButtonElement;
 
 const cd = 120 * 1000;
 
-form?.addEventListener('submit', async (e) =>{
+let isSubmitting = false;
+
+form?.addEventListener('submit', async (e) => {
     e.preventDefault();
- 
+
+    if (isSubmitting) return;
+    isSubmitting = true;
     submitBtn.disabled = true;
 
-    const lastSubmit = localStorage.getItem('lastSubmit');
-    if(lastSubmit){
-      const elapsed = Date.now() - Number(lastSubmit);
+    try {
+        const lastSubmit = localStorage.getItem('lastSubmit');
 
-      if(elapsed < cd){
-        alert("You just sent an Email. Try again after a few minutes.")
-        return;
-      }
-    }
+        if (lastSubmit) {
+            const elapsed = Date.now() - Number(lastSubmit);
 
-     const token = (
-        document.querySelector(
-            '[name="cf-turnstile-response"]'
-        ) as HTMLInputElement
-    )?.value;
+            if (elapsed < cd) {
+                alert("You just sent an Email. Try again after a few minutes.");
+                return;
+            }
+        }
 
-    if (!token) {
-        alert('Please complete the verification.');
-        return;
-    }
+        const token = (
+            document.querySelector(
+                '[name="cf-turnstile-response"]'
+            ) as HTMLInputElement
+        )?.value;
 
-    const formData = new FormData(form);
-    const success =  await sendEmail(formData, successT, errorT);
+        if (!token) {
+            alert('Please complete the verification.');
+            return;
+        }
 
-    if(success){
-      form.reset();
+        const formData = new FormData(form);
+        const success = await sendEmail(formData, successT, errorT);
+
+        if (success) {
+            localStorage.setItem('lastSubmit', Date.now().toString());
+            form.reset();
+        }
+    } finally {
+        isSubmitting = false;
+        submitBtn.disabled = false;
     }
 });
 

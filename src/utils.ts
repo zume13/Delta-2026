@@ -155,8 +155,7 @@ export async function sendEmail (formData : FormData, successT : HTMLElement, er
                     message: message.toString()
                 }, 
             key);
-
-            localStorage.setItem('lastSubmit', Date.now().toString())
+            
             showToast(successT, errorT);
             return true;
     }catch(error)
